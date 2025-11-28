@@ -1,0 +1,16 @@
+[package]
+name = "cloudseedcore-rs"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+build = "build.rs"
+
+[dependencies]
+cxx = "1"
+num_enum = "0.7"
+
+[build-dependencies]
+cxx-build = "1"
+
+[dev-dependencies]
+hound = "3"

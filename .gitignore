@@ -1,0 +1,14 @@
+# Rust
+/target
+Cargo.lock
+
+# IDE
+.idea
+
+# CloudSeedCore provides its solution files - we don't need them
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# OS
+.DS_Store
