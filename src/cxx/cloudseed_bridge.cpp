@@ -80,7 +80,7 @@ void CloudSeedReverb::process(rust::Slice<const float> in_l,
     controller->Process(inL, inR, outL, outR, n);
 }
 
-rust::String format_parameter(uint32_t param_id, float value) {
+rust::String cs_format_parameter(uint32_t param_id, float value) {
     char buffer[MAX_STR_SIZE];
     Cloudseed::FormatParameter(value, MAX_STR_SIZE, static_cast<int>(param_id), buffer);
     return rust::String(buffer);
