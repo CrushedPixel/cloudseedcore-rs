@@ -1,12 +1,9 @@
 ﻿#include "cloudseed_bridge.h"
 #include <memory>
 #include <algorithm>
-#include "cloudseed_shims.h"
 
-// CloudSeedCore headers.
-// CloudSeedCore is added to the include path in build.rs
-#include "DSP/ReverbController.h"
-#include "Parameters.h"
+// CloudSeedCore/include is added to the include path in build.rs
+#include "CloudSeedCore.h"
 
 using Cloudseed::ReverbController;
 
@@ -41,9 +38,9 @@ float CloudSeedReverb::get_parameter(uint32_t id) const {
 void CloudSeedReverb::get_all_parameters(rust::Slice<float> out) const {
     int count = Cloudseed::Parameter::COUNT;
     int n = std::min(static_cast<int>(out.size()), count);
-    double* src = controller->GetAllParameters();
-    for (int i = 0; i < n; ++i) {
-        out[i] = static_cast<float>(src[i]);
+    float* src = controller->GetAllParameters();
+    for (int i = 0; i < n; i++) {
+        out[i] = src[i];
     }
 }
 
@@ -55,7 +52,7 @@ void CloudSeedReverb::load_program(rust::Slice<const float> params) {
         return;
     }
 
-    for (int pid = 0; pid < count; ++pid) {
+    for (int pid = 0; pid < count; pid++) {
         controller->SetParameter(pid, static_cast<double>(params[pid]));
     }
 

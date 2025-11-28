@@ -5,10 +5,11 @@ Cargo.lock
 # IDE
 .idea
 
-# CloudSeedCore provides its solution files - we don't need them
+# CloudSeedCore provides its solution files/CMakeLists - we don't need them
 *.sln
 *.vcxproj
 *.vcxproj.filters
+CMakeLists.txt
 
 # OS
 .DS_Store

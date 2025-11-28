@@ -1,7 +1,8 @@
 # cloudseedcore-rs
 
-This crate provides safe Rust bindings to the [CloudSeedCore](https://github.com/GhostNoteAudio/CloudSeedCore/) Reverb
-algorithm, commit [`deb21de`](https://github.com/GhostNoteAudio/CloudSeedCore/tree/deb21ded9eb7dad9b3ff94ce1ba96a963716594e).
+This crate provides safe Rust bindings to the [CloudSeedCore](https://github.com/GhostNoteAudio/CloudSeedCore/) Reverb algorithm.  
+The specific version vendored is commit [`b46bd7e`](https://github.com/talaviram/CloudSeedCore/tree/b46bd7e0b9467c31d6b95444bfc290169932eaa1) 
+on talaviram's fork, which fixes some cross-platform compatibility issues.
 
 Building this crate requires a C++14 toolchain.
 The C++ bindings are created using [cxx](https://github.com/dtolnay/cxx).
