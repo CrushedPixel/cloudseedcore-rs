@@ -1,8 +1,16 @@
 [package]
 name = "cloudseedcore-rs"
+description = "A safe wrapper around the CloudSeedCore Reverb algorithm."
+
 version = "0.1.0"
 edition = "2024"
 license = "MIT"
+
+authors = ["Marius Metzger (CrushedPixel)"]
+repository = "https://github.com/CrushedPixel/cloudseedcore-rs"
+keywords = ["audio", "reverb", "dsp", "cloudseedcore"]
+categories = ["multimedia::audio", "external-ffi-bindings"]
+
 build = "build.rs"
 
 [dependencies]
