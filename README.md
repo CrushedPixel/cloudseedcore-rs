@@ -6,6 +6,11 @@ algorithm, commit [`deb21de`](https://github.com/GhostNoteAudio/CloudSeedCore/tr
 Building this crate requires a C++14 toolchain.
 The C++ bindings are created using [cxx](https://github.com/dtolnay/cxx).
 
+## Hear it
+Output of one of the test cases, wide pulse with the Dark Plate preset applied:
+
+https://github.com/user-attachments/assets/fb64421c-4911-4527-8389-5030926e4b85
+
 ## Example usage
 
 ```rs
