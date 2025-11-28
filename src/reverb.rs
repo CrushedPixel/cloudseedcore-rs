@@ -9,6 +9,9 @@ pub struct ReverbController {
     max_block_size: u32,
 }
 
+// SAFETY: the underlying CloudSeedCore ReverbController written in C++ is single-threaded.
+unsafe impl Send for ReverbController {}
+
 impl ReverbController {
     /// Creates a reverb instance with the given sample rate
     /// and maximum block size that will be passed to `process`.
