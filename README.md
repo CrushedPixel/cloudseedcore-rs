@@ -1,4 +1,6 @@
 # cloudseedcore-rs
+[![Crates.io](https://img.shields.io/crates/v/cloudseedcore-rs.svg)](https://crates.io/crates/cloudseedcore-rs)
+[![Docs.rs](https://img.shields.io/docsrs/cloudseedcore-rs)](https://docs.rs/cloudseedcore-rs)
 
 This crate provides safe Rust bindings to the [CloudSeedCore](https://github.com/GhostNoteAudio/CloudSeedCore/) Reverb algorithm.  
 The specific version vendored is commit [`b46bd7e`](https://github.com/talaviram/CloudSeedCore/tree/b46bd7e0b9467c31d6b95444bfc290169932eaa1) 
