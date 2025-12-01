@@ -16,6 +16,7 @@ build = "build.rs"
 [dependencies]
 cxx = "1"
 num_enum = "0.7"
+lexical-parse-float = "1"
 
 [build-dependencies]
 cxx-build = "1"
