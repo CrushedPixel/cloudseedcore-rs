@@ -131,7 +131,7 @@ impl Program {
 
     /// Creates a `Program` from a full parameter array.
     /// This can be used for deserialization purposes.
-    pub fn from_array(a: [f32; 45]) -> Self {
+    pub const fn from_array(a: [f32; 45]) -> Self {
         Self {
             interpolation: param_to_bool(a[0]),
             low_cut_enabled: param_to_bool(a[1]),
@@ -406,11 +406,11 @@ impl Program {
     }
 }
 
-fn param_to_bool(value: f32) -> bool {
+const fn param_to_bool(value: f32) -> bool {
     value >= 0.5
 }
 
-fn bool_to_param(value: bool) -> f32 {
+const fn bool_to_param(value: bool) -> f32 {
     if value { 1.0 } else { 0.0 }
 }
 
