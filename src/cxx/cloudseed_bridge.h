@@ -15,6 +15,7 @@ public:
 
     void reset();
     void set_sample_rate(float sample_rate);
+    float get_sample_rate() const;
 
     void set_parameter(uint32_t id, float value);
     float get_parameter(uint32_t id) const;

@@ -24,6 +24,10 @@ void CloudSeedReverb::set_sample_rate(float sample_rate) {
     controller->SetSamplerate(static_cast<int>(sample_rate));
 }
 
+float CloudSeedReverb::get_sample_rate() const {
+    return this->sample_rate;
+}
+
 void CloudSeedReverb::set_parameter(uint32_t id, float value) {
     int pid = static_cast<int>(id);
     if (pid >= 0 && pid < Cloudseed::Parameter::COUNT) {

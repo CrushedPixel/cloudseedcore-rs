@@ -91,3 +91,15 @@ impl ReverbController {
         self.inner.as_mut().unwrap().load_program(&params);
     }
 }
+
+impl Clone for ReverbController {
+    /// Creates a new underlying C++ ReverbController and reapplies all parameters.
+    fn clone(&self) -> Self {
+        let sample_rate = self.inner.as_ref().unwrap().get_sample_rate();
+        let mut cloned = ReverbController::new(sample_rate, self.max_block_size);
+        // apply program parameters from current instance
+        let program = self.get_program();
+        cloned.set_program(&program);
+        cloned
+    }
+}

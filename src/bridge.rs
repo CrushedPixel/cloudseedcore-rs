@@ -14,6 +14,7 @@ mod ffi {
 
         fn reset(self: Pin<&mut CloudSeedReverb>);
         fn set_sample_rate(self: Pin<&mut CloudSeedReverb>, sample_rate: f32);
+        fn get_sample_rate(self: &CloudSeedReverb) -> f32;
 
         fn set_parameter(self: Pin<&mut CloudSeedReverb>, param_id: u32, value: f32);
         fn get_parameter(self: &CloudSeedReverb, param_id: u32) -> f32;
