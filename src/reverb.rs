@@ -42,6 +42,11 @@ impl ReverbController {
     ) {
         assert!(num_samples <= self.max_block_size);
 
+        assert!(in_l.len() >= num_samples as usize);
+        assert!(in_r.len() >= num_samples as usize);
+        assert!(out_l.len() >= num_samples as usize);
+        assert!(out_r.len() >= num_samples as usize);
+
         self.inner
             .as_mut()
             .unwrap()
